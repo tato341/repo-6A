@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Usuario</title>
+</head>
+<body>
+    <h1>Agregar Usuario</h1>
+
+    <label>Nombre del usuario:</label>
+    <input type="text" id="nuevoUsuario">
+
+    <button onclick="agregarUsuario()">Agregar</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        let usuarios = [];
+
+        function agregarUsuario() {
+            let nombre = document.getElementById("nuevoUsuario").value;
+            usuarios.push(nombre);
+            document.getElementById("mensaje").innerText = "Usuario agregado: " + nombre;
+        }
+    </script>
+
+    <br>
+    <a href="index.html">Volver al inicio</a>
+</body>
+</html>
