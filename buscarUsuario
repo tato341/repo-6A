@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Usuario</title>
+</head>
+<body>
+    <h1>Buscar Usuario</h1>
+
+    <label>Ingrese nombre:</label>
+    <input type="text" id="buscar">
+
+    <button onclick="buscarUsuario()">Buscar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let usuarios = ["Juan", "Pedro", "Luis", "María"];
+
+        function buscarUsuario() {
+            let nombre = document.getElementById("buscar").value;
+            let res = usuarios.includes(nombre);
+
+            if (res) {
+                document.getElementById("resultado").innerText = "Usuario encontrado ✔️";
+            } else {
+                document.getElementById("resultado").innerText = "Usuario NO encontrado ❌";
+            }
+        }
+    </script>
+
+    <br>
+    <a href="index.html">Volver al inicio</a>
+</body>
+</html>
