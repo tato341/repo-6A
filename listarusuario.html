@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+
+    <button onclick="listar()">Mostrar Usuarios</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        let usuarios = ["Juan", "Pedro", "Luis", "María"];
+
+        function listar() {
+            let listaHTML = "";
+            usuarios.forEach(u => {
+                listaHTML += "<li>" + u + "</li>";
+            });
+            document.getElementById("lista").innerHTML = listaHTML;
+        }
+    </script>
+
+    <br>
+    <a href="index.html">Volver al inicio</a>
+</body>
+</html>
